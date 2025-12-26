@@ -36,7 +36,6 @@ android {
 
 dependencies {
     implementation(project(":api"))
-    implementation(project(":domain"))
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
