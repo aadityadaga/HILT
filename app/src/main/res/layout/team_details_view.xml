@@ -5,7 +5,7 @@
     <data>
         <variable
             name="team"
-            type="com.example.data.model.Teams" />
+            type="com.example.data.model.CustomTeams" />
     </data>
 
     <androidx.cardview.widget.CardView

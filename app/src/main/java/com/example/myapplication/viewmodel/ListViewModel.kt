@@ -2,7 +2,7 @@ package com.example.myapplication.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.data.model.TeamResponse
+import com.example.data.model.CustomTeamResponse
 import com.example.data.state.DataHandler
 import com.example.data.usecase.GetTeamsDetailUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -15,8 +15,9 @@ import javax.inject.Inject
 class ListViewModel @Inject constructor(private val getTeamsDetailUseCase: GetTeamsDetailUseCase) :
     ViewModel() {
 
-    private val _teamsDetails = MutableStateFlow<DataHandler<TeamResponse>>(DataHandler.Loading())
-    val teamsDetails: StateFlow<DataHandler<TeamResponse>> = _teamsDetails
+    private val _teamsDetails =
+        MutableStateFlow<DataHandler<CustomTeamResponse>>(DataHandler.Loading())
+    val teamsDetails: StateFlow<DataHandler<CustomTeamResponse>> = _teamsDetails
 
 
     init {

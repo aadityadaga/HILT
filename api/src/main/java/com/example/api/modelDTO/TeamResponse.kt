@@ -1,5 +1,6 @@
-package com.example.data.model
+package com.example.api.modelDTO
 
+import com.example.apimodule.network.modelDTO.Teams
 import com.google.gson.annotations.SerializedName
 
 

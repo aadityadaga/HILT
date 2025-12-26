@@ -1,19 +1,22 @@
 plugins {
-    alias(libs.plugins.android.library)
+    alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
+
 }
 
 android {
-    namespace = "com.example.apimodule"
+    namespace = "com.example.api"
     compileSdk = 34
 
     defaultConfig {
+        applicationId = "com.example.api"
         minSdk = 24
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -35,17 +38,15 @@ android {
 }
 
 dependencies {
-    implementation(project(":api"))
-    implementation(project(":domain"))
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation(libs.retrofit)
-    implementation(libs.retrofit.gson)
-    implementation(libs.okhttp)
+    implementation(libs.google.gson)
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+    implementation(libs.retrofit.gson)
+    implementation(libs.okhttp)
 }

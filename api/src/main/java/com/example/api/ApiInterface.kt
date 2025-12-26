@@ -1,6 +1,6 @@
-package com.example.data
+package com.example.api
 
-import com.example.data.model.TeamResponse
+import com.example.api.modelDTO.TeamResponse
 import retrofit2.Response
 import retrofit2.http.GET
 
