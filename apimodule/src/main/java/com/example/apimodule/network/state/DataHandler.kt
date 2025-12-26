@@ -1,4 +1,4 @@
-package com.example.myapplication.state
+package com.example.apimodule.network.state
 
 sealed class DataHandler<T>(
     val data: T? = null,

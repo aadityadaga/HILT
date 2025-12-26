@@ -1,7 +1,6 @@
 package com.example.myapplication.ui
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -10,7 +9,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityListViewBinding
-import com.example.myapplication.state.DataHandler
+import com.example.apimodule.network.state.DataHandler
 import com.example.myapplication.ui.adapter.TeamAdapter
 import com.example.myapplication.viewmodel.ListViewModel
 import dagger.hilt.android.AndroidEntryPoint

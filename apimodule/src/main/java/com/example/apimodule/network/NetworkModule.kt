@@ -1,6 +1,5 @@
-package com.example.myapplication.data.remote.network
+package com.example.apimodule.network
 
-import com.example.myapplication.data.remote.ApiInterface
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,6 +1,5 @@
-package com.example.myapplication.model
+package com.example.data.model
 
-import com.google.gson.annotations.SerializedName
 
 data class Teams(
 

@@ -2,9 +2,9 @@ package com.example.myapplication.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.myapplication.data.remote.usecase.GetTeamsDetailUseCase
-import com.example.myapplication.model.TeamResponse
-import com.example.myapplication.state.DataHandler
+import com.example.apimodule.network.state.DataHandler
+import com.example.apimodule.network.usecase.GetTeamsDetailUseCase
+import com.example.data.model.TeamResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

@@ -1,6 +1,6 @@
-package com.example.myapplication.data.remote
+package com.example.apimodule.network
 
-import com.example.myapplication.model.TeamResponse
+import com.example.data.model.TeamResponse
 import retrofit2.Response
 import retrofit2.http.GET
 
