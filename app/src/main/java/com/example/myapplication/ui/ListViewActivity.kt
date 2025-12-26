@@ -9,7 +9,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityListViewBinding
-import com.example.apimodule.network.state.DataHandler
+import com.example.data.state.DataHandler
 import com.example.myapplication.ui.adapter.TeamAdapter
 import com.example.myapplication.viewmodel.ListViewModel
 import dagger.hilt.android.AndroidEntryPoint

@@ -2,9 +2,9 @@ package com.example.myapplication.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.apimodule.network.state.DataHandler
-import com.example.apimodule.network.usecase.GetTeamsDetailUseCase
 import com.example.data.model.TeamResponse
+import com.example.data.state.DataHandler
+import com.example.data.usecase.GetTeamsDetailUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -22,6 +22,7 @@ class ListViewModel @Inject constructor(private val getTeamsDetailUseCase: GetTe
     init {
         fetchTeamsDetail()
     }
+
     fun fetchTeamsDetail() {
         viewModelScope.launch {
             _teamsDetails.value = DataHandler.Loading()

@@ -15,5 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "My Application"
 include(":app")
-include(":apimodule")
 include(":data")
+include(":domain")

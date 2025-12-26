@@ -1,9 +1,9 @@
-package com.example.apimodule.network.usecase
+package com.example.data.usecase
 
 
-import com.example.apimodule.network.repository.TeamsDetailsRepository
-import com.example.apimodule.network.state.DataHandler
 import com.example.data.model.TeamResponse
+import com.example.data.repository.TeamsDetailsRepository
+import com.example.data.state.DataHandler
 import javax.inject.Inject
 
 class GetTeamsDetailUseCase @Inject constructor(

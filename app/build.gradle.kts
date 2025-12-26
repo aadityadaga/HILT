@@ -38,8 +38,8 @@ kotlin {
 
 dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.9.24"))
+    implementation(project(":domain"))
     implementation(project(":data"))
-    implementation(project(":apimodule"))
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.activity.ktx)

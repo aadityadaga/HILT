@@ -1,6 +1,6 @@
-package com.example.apimodule.network.repository
+package com.example.data.repository
 
-import com.example.apimodule.network.ApiInterface
+import com.example.data.ApiInterface
 import com.example.data.model.TeamResponse
 import retrofit2.Response
 import javax.inject.Inject

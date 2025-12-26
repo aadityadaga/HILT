@@ -1,4 +1,4 @@
-package com.example.apimodule.network
+package com.example.data
 
 import com.example.data.model.TeamResponse
 import retrofit2.Response
