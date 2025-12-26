@@ -27,7 +27,7 @@ class ListViewModel @Inject constructor(private val getTeamsDetailUseCase: GetTe
     fun fetchTeamsDetail() {
         viewModelScope.launch {
             _teamsDetails.value = DataHandler.Loading()
-            _teamsDetails.value = getTeamsDetailUseCase.execute()
+            _teamsDetails.value = getTeamsDetailUseCase.invoke()
         }
     }
 }

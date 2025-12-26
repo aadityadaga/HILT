@@ -1,6 +1,6 @@
 package com.example.apimodule.network
 
-import com.example.apimodule.network.api.ApiInterface
+import com.example.api.ApiInterface
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
