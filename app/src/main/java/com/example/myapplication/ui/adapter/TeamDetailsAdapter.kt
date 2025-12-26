@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.data.model.CustomTeams
 import com.example.myapplication.databinding.TeamDetailsViewBinding
-import com.example.myapplication.model.Teams
 
 class TeamAdapter(
-    private val teams: List<Teams>
+    private val teams: List<CustomTeams>
 ) : RecyclerView.Adapter<TeamAdapter.TeamViewHolder>() {
 
     override fun onCreateViewHolder(
@@ -33,7 +33,7 @@ class TeamAdapter(
         private val binding: TeamDetailsViewBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(team: Teams) {
+        fun bind(team: CustomTeams) {
             binding.team = team
             Glide.with(binding.root.context).load(team.strLogo).into(binding.teamBadgeImageView);
             binding.executePendingBindings()
