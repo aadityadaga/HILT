@@ -2,9 +2,10 @@ pluginManagement {
     repositories {
         google()
         mavenCentral()
-        gradlePluginPortal() // <-- Add this line
+        gradlePluginPortal()
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -13,7 +14,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "My Application"
+rootProject.name = "MyApplication"
 include(":app")
 include(":data")
 include(":domain")

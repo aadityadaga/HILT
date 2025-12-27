@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.myapplication"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.myapplication"
@@ -15,6 +15,7 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildFeatures {
@@ -30,6 +31,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
 }
 
 kotlin {
@@ -37,33 +42,45 @@ kotlin {
 }
 
 dependencies {
-    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.9.24"))
-    implementation(project(":domain"))
     implementation(project(":data"))
-    implementation(libs.core.ktx)
+    implementation(project(":domain"))
+    // Android
     implementation(libs.appcompat)
-    implementation(libs.activity.ktx)
     implementation(libs.material)
+    implementation(libs.androidx.core.ktx)
 
-
+    // Lifecycle
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.lifecycle.runtime)
-    implementation(libs.coroutines.android)
+    implementation(libs.androidx.lifecycle.runtime.compose)
 
+    // Coroutines
+    implementation(libs.coroutines.android)
+    testImplementation(libs.coroutines.test)
+
+    // Network
     implementation(libs.retrofit)
     implementation(libs.retrofit.gson)
     implementation(libs.okhttp)
 
+    // DI
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
 
-    implementation(platform(libs.compose.bom))
-    implementation(libs.compose.ui)
-    implementation(libs.compose.material3)
-    implementation(libs.compose.ui.tooling)
+    // Compose
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.graphics)
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.activity.compose)
+    debugImplementation(libs.androidx.compose.ui.tooling)
 
-    implementation(libs.javapoet)
+    // Image Loading
+    implementation(libs.coil.compose)
     implementation(libs.glide)
     ksp(libs.glide.compiler)
 
+    // Testing
+    testImplementation(libs.mockk)
 }

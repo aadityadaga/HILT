@@ -6,8 +6,8 @@ plugins {
 }
 
 android {
-    namespace = "com.example.data"
-    compileSdk = 34
+    namespace = "com.example.domain"
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24
@@ -25,34 +25,17 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 }
 
 dependencies {
-
-    // Core
-    implementation(libs.core.ktx)
-
-    // Network
-    implementation(libs.retrofit)
-    implementation(libs.retrofit.gson)
-    implementation(libs.okhttp)
-
-    // DI
+    implementation(project(":api"))
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
-
-    // Utilities
-    implementation(libs.google.gson)
-
-    // Testing
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.ext.junit)
-    androidTestImplementation(libs.espresso.core)
 }
